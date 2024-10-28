@@ -10,7 +10,7 @@ jobs:
   submit:
     runs-on: ubuntu-latest
     env:
-        URL: "https://github.com/Loongson-neuq/LoongsonNeuq/releases/download/assignment-submit-release/AssignmentSubmit.AppImage"
+        URL: "https://github.com/Loongson-neuq/LoongsonNeuq/releases/download/assignment-submit-release/AssignmentSubmit-pending.AppImage"
         SAVE_PATH: "AssignmentSubmit.AppImage"
 
     steps:
