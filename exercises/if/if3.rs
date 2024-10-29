@@ -2,17 +2,20 @@
 //
 // Execute `rustlings hint if3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 pub fn animal_habitat(animal: &str) -> &'static str {
+    // HINT
+    // In real development situations,
+    // if you really need to convert an animal to an identifier and then to habitat,
+    // You should split this function into two functions.
+    // Also, pattern matching is more elegant in this case.
     let identifier = if animal == "crab" {
         1
     } else if animal == "gopher" {
-        2.0
+        2
     } else if animal == "snake" {
         3
     } else {
-        "Unknown"
+        -1
     };
 
     // DO NOT CHANGE THIS STATEMENT BELOW

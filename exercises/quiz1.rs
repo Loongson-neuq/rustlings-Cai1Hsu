@@ -13,10 +13,20 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
-
 // Put your function here!
-// fn calculate_price_of_apples {
+fn calculate_price_of_apples(qty: i32) -> i32 {
+    if qty > 40 {
+        qty
+    } else {
+        qty * 2
+    }
+
+    // HINT: You will like pattern matching
+    // match qty {
+    //     0..=40 => qty * 2,
+    //     _ => qty
+    // }
+}
 
 // Don't modify this function!
 #[test]
