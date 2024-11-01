@@ -19,6 +19,12 @@
 
  Rustlings 是长期作业，没有要求一周内完成。最慢根据每周要求完成对应的内容即可。如果你已经完成过，建议再做一遍，尽量争取 2 小时内能够完成前 101 个练习。
 
+## Rustlings 排行榜
+
+[点我](https://github.com/Loongson-neuq/Rustlings-rank) 前往。
+
+注意：排行榜分数仅每 5 分钟更新一次，因此可能不及时。
+
 # rustlings 🦀❤️
 
 </div>
