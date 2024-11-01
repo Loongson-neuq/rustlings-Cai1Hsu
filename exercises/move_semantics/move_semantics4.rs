@@ -10,9 +10,9 @@
 // I AM NOT DONE
 
 fn main() {
-    let vec0 = Vec::new();
+    let vec = Vec::new();
 
-    let mut vec1 = fill_vec(vec0);
+    let mut vec = foo(vec0);
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 
@@ -21,13 +21,13 @@ fn main() {
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 }
 
-// `fill_vec()` no longer takes `vec: Vec<i32>` as argument
-fn fill_vec() -> Vec<i32> {
-    let mut vec = vec;
+// `foo()` does NOT take `vec: Vec<i32>` as argument
+fn foo() -> &mut Vec<i32> {
+    let mut vec = ???
 
     vec.push(22);
     vec.push(44);
     vec.push(66);
 
-    vec
+    ???
 }
