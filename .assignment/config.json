@@ -27,7 +27,7 @@
       {
         "title": "Prepare format check environment",
         "timeout": 20,
-        "command": "cargo new format_check",
+        "command": "cargo new format_check --lib",
         "score": 0,
         "required": true
       },

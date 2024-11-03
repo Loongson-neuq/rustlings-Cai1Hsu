@@ -37,7 +37,7 @@ def get_exercise_src_file(exercise_name):
     return None
 
 def prepare_format_check(exercise_path):
-    destination = "format_check/src/main.rs"
+    destination = "format_check/src/lib.rs"
     shutil.copyfile(exercise_path, destination)
 
 def cargo_fmt_check(manifest_path):
