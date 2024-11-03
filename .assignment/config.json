@@ -25,6 +25,13 @@
         "required": true
       },
       {
+        "title": "Prepare format check environment",
+        "timeout": 20,
+        "command": "cargo new format_check",
+        "score": 0,
+        "required": true
+      },
+      {
         "title": "intro1",
         "timeout": 10,
         "command": "python3 .assignment/grades.py .github/result/check_result.json intro1",
