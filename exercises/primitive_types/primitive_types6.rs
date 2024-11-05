@@ -14,6 +14,5 @@ fn indexing_tuple() {
     // HINT: You can also extract the second value using destructuring
     // let (_, second, ..) = numbers;
 
-    assert_eq!(2, second,
-        "This is not the 2nd number in the tuple!")
+    assert_eq!(2, second, "This is not the 2nd number in the tuple!")
 }
