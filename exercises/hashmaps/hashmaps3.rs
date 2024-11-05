@@ -14,8 +14,6 @@
 // Execute `rustlings hint hashmaps3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 use std::collections::HashMap;
 
 // A structure to store the goal details of a team.
@@ -28,17 +26,38 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
     // The name of the team is the key and its associated struct is the value.
     let mut scores: HashMap<String, Team> = HashMap::new();
 
+    // Template for an empty team
+    // Since Team type implements Copy semantics, we can use it as a constant
+    // And when we assign it to a key, it will be copied to the value, just like a factory
+    const EMPTY_TEAM: Team = Team {
+        goals_scored: 0,
+        goals_conceded: 0,
+    };
+
     for r in results.lines() {
         let v: Vec<&str> = r.split(',').collect();
         let team_1_name = v[0].to_string();
         let team_1_score: u8 = v[2].parse().unwrap();
         let team_2_name = v[1].to_string();
         let team_2_score: u8 = v[3].parse().unwrap();
-        // TODO: Populate the scores table with details extracted from the
+        // Populate the scores table with details extracted from the
         // current line. Keep in mind that goals scored by team_1
         // will be the number of goals conceded from team_2, and similarly
         // goals scored by team_2 will be the number of goals conceded by
         // team_1.
+
+        // Do NOT pass team_1_name.clone or something similar to entry() method
+        // It allocates memory for the key, which is not necessary
+        let team1 = scores.entry(team_1_name).or_insert(EMPTY_TEAM);
+        team1.goals_scored += team_1_score;
+        team1.goals_conceded += team_2_score;
+        drop(team1); // drop mutable reference after usage is a good practice
+                     // although it is not necessary in this case
+
+        let team2 = scores.entry(team_2_name).or_insert(EMPTY_TEAM);
+        team2.goals_scored += team_2_score;
+        team2.goals_conceded += team_1_score;
+        drop(team2);
     }
     scores
 }
