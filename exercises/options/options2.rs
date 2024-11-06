@@ -3,8 +3,6 @@
 // Execute `rustlings hint options2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 #[cfg(test)]
 mod tests {
     #[test]
@@ -12,8 +10,8 @@ mod tests {
         let target = "rustlings";
         let optional_target = Some(target);
 
-        // TODO: Make this an if let statement whose value is "Some" type
-        word = optional_target {
+        // Make this an if let statement whose value is "Some" type
+        if let Some(word) = optional_target {
             assert_eq!(word, target);
         }
     }
@@ -29,10 +27,14 @@ mod tests {
 
         let mut cursor = range;
 
-        // TODO: make this a while let statement - remember that vector.pop also
+        // make this a while let statement - remember that vector.pop also
         // adds another layer of Option<T>. You can stack `Option<T>`s into
         // while let and if let.
-        integer = optional_integers.pop() {
+        // Nested Option<T> is stupid, that's what I hate about Rust
+        // It wastes a lot of time to unwrap the value, and wastes a lot of memory because of padding and alignment
+        // It's just stupid, see how C#'s nullable type is implemented
+        // You should never let Option<T> be nested, it's just stupid
+        while let Some(Some(integer)) = optional_integers.pop() {
             assert_eq!(integer, cursor);
             cursor -= 1;
         }

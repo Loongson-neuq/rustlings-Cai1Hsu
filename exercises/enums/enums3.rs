@@ -5,10 +5,17 @@
 // Execute `rustlings hint enums3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 enum Message {
-    // TODO: implement the message variant types based on their usage below
+    ChangeColor(u8, u8, u8),
+    // It's hard to control the lifetime of a string in such scenario
+    // Because the sender side may prefer to drop the allocated data
+    // on the next poll, but the receiver side may still need it
+    // For example, we may enqueue a batch of messages in the message thread
+    // and then process them in the update thread, which is quite common in game
+    // so we use String instead of &str
+    Echo(String),
+    Move(Point),
+    Quit,
 }
 
 struct Point {
@@ -20,7 +27,7 @@ struct State {
     color: (u8, u8, u8),
     position: Point,
     quit: bool,
-    message: String
+    message: String,
 }
 
 impl State {
@@ -32,17 +39,26 @@ impl State {
         self.quit = true;
     }
 
-    fn echo(&mut self, s: String) { self.message = s }
+    fn echo(&mut self, s: String) {
+        self.message = s
+    }
 
     fn move_position(&mut self, p: Point) {
         self.position = p;
     }
 
     fn process(&mut self, message: Message) {
-        // TODO: create a match expression to process the different message
+        // create a match expression to process the different message
         // variants
         // Remember: When passing a tuple as a function argument, you'll need
         // extra parentheses: fn function((t, u, p, l, e))
+
+        match message {
+            Message::ChangeColor(r, g, b) => self.change_color((r, g, b)),
+            Message::Quit => self.quit(),
+            Message::Echo(s) => self.echo(s),
+            Message::Move(p) => self.move_position(p),
+        }
     }
 }
 

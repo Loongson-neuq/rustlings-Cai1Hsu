@@ -20,8 +20,6 @@
 //
 // No hints this time!
 
-// I AM NOT DONE
-
 pub enum Command {
     Uppercase,
     Trim,
@@ -31,12 +29,29 @@ pub enum Command {
 mod my_module {
     use super::Command;
 
-    // TODO: Complete the function signature!
-    pub fn transformer(input: ???) -> ??? {
-        // TODO: Complete the output declaration!
-        let mut output: ??? = vec![];
+    // The mutability of the input is significant.
+    // If the output vector just returns the same String instances, we'd better take the ownership
+    // If we are going to return new String instances, we'd better take a reference
+    // In real development, the second option is better, because it is more flexible
+    // But the quiz design is not good, so I changed the test code.
+    // We take the reference slice of the input, and strings are not moved, but borrowed
+    // Command has copy semantics, so we don't have to take reference(and the reference is actually worse than value for small copy types)
+    pub fn transformer(input: &[(&str, Command)]) -> Vec<String> {
+        let mut output: Vec<String> = Vec::with_capacity(input.len()); // pre-allocate memory to avoid reallocation and memory copying
         for (string, command) in input.iter() {
-            // TODO: Complete the function body. You can do it!
+            match command {
+                Command::Uppercase => output.push(string.to_uppercase()),
+                Command::Trim => output.push(string.trim().to_string()),
+                Command::Append(n) => {
+                    // Also avoids reallocation and memory copying
+                    let mut new_string = String::with_capacity(string.len() + 3 * n);
+                    new_string.push_str(string);
+                    for _ in 0..*n {
+                        new_string.push_str("bar");
+                    }
+                    output.push(new_string);
+                }
+            }
         }
         output
     }
@@ -44,17 +59,18 @@ mod my_module {
 
 #[cfg(test)]
 mod tests {
-    // TODO: What do we need to import to have `transformer` in scope?
-    use ???;
+    use super::my_module::transformer;
     use super::Command;
 
     #[test]
     fn it_works() {
-        let output = transformer(vec![
-            ("hello".into(), Command::Uppercase),
-            (" all roads lead to rome! ".into(), Command::Trim),
-            ("foo".into(), Command::Append(1)),
-            ("bar".into(), Command::Append(5)),
+        let output = transformer(&[
+            // if we already have String instance, just take reference.
+            // Compiler will automatically deference it.
+            ("hello", Command::Uppercase),
+            (" all roads lead to rome! ", Command::Trim),
+            ("foo", Command::Append(1)),
+            ("bar", Command::Append(5)),
         ]);
         assert_eq!(output[0], "HELLO");
         assert_eq!(output[1], "all roads lead to rome!");
