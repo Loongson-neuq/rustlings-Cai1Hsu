@@ -1,0 +1,148 @@
+info: downloading installer
+warning: tool `rust-analyzer` is already installed, remove it from `/home/runner/.cargo/bin`, then run `rustup update` to have rustup manage this tool.
+warning: tool `rustfmt` is already installed, remove it from `/home/runner/.cargo/bin`, then run `rustup update` to have rustup manage this tool.
+warning: tool `cargo-fmt` is already installed, remove it from `/home/runner/.cargo/bin`, then run `rustup update` to have rustup manage this tool.
+info: profile set to 'default'
+info: default host triple is x86_64-unknown-linux-gnu
+warning: Updating existing toolchain, profile choice will be ignored
+info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+info: default toolchain set to 'stable-x86_64-unknown-linux-gnu'
+info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+info: checking for self-update
+warning: tool `rust-analyzer` is already installed, remove it from `/home/runner/.cargo/bin`, then run `rustup update` to have rustup manage this tool.
+warning: tool `rustfmt` is already installed, remove it from `/home/runner/.cargo/bin`, then run `rustup update` to have rustup manage this tool.
+warning: tool `cargo-fmt` is already installed, remove it from `/home/runner/.cargo/bin`, then run `rustup update` to have rustup manage this tool.
+  Installing rustlings v5.5.1 (/home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu)
+    Updating crates.io index
+     Locking 93 packages to latest compatible versions
+      Adding bitflags v1.3.2 (latest: v2.6.0)
+      Adding cfg-if v0.1.10 (latest: v1.0.0)
+      Adding encode_unicode v0.3.6 (latest: v1.0.0)
+      Adding fsevent v0.4.0 (latest: v2.1.2)
+      Adding fsevent-sys v2.0.1 (latest: v4.1.0)
+      Adding hermit-abi v0.3.9 (latest: v0.4.0)
+      Adding indicatif v0.16.2 (latest: v0.17.8)
+      Adding inotify v0.7.1 (latest: v0.11.0)
+      Adding mio v0.6.23 (latest: v1.0.2)
+      Adding miow v0.2.2 (latest: v0.6.0)
+      Adding notify v4.0.18 (latest: v7.0.0)
+      Adding toml v0.5.11 (latest: v0.8.19)
+      Adding unicode-width v0.1.14 (latest: v0.2.0)
+      Adding wasi v0.11.0+wasi-snapshot-preview1 (latest: v0.13.3+wasi-0.2.2)
+      Adding winapi v0.2.8 (latest: v0.3.9)
+      Adding windows-sys v0.52.0 (latest: v0.59.0)
+ Downloading crates ...
+  Downloaded filetime v0.2.25
+  Downloaded argh_shared v0.1.12
+  Downloaded argh v0.1.12
+  Downloaded console v0.15.8
+  Downloaded signal-hook-registry v1.4.2
+  Downloaded lock_api v0.4.12
+  Downloaded unicode-ident v1.0.13
+  Downloaded indicatif v0.16.2
+  Downloaded tokio v1.41.0
+  Downloaded smallvec v1.13.2
+  Downloaded walkdir v2.5.0
+  Downloaded socket2 v0.5.7
+  Downloaded serde_json v1.0.132
+  Downloaded toml v0.5.11
+  Downloaded serde_derive v1.0.214
+  Downloaded mio v1.0.2
+  Downloaded ryu v1.0.18
+  Downloaded notify v4.0.18
+  Downloaded scopeguard v1.2.0
+  Downloaded parking_lot_core v0.9.10
+  Downloaded regex v1.11.1
+  Downloaded mio-extras v2.0.6
+  Downloaded tokio-macros v2.4.0
+  Downloaded slab v0.4.9
+  Downloaded quote v1.0.37
+  Downloaded unicode-width v0.1.14
+  Downloaded syn v2.0.87
+  Downloaded regex-syntax v0.8.5
+  Downloaded pin-project-lite v0.2.15
+  Downloaded number_prefix v0.4.0
+  Downloaded lazy_static v1.5.0
+  Downloaded inotify v0.7.1
+  Downloaded mio v0.6.23
+  Downloaded memchr v2.7.4
+  Downloaded log v0.4.22
+  Downloaded itoa v1.0.11
+  Downloaded inotify-sys v0.1.5
+  Downloaded home v0.5.9
+  Downloaded glob v0.3.1
+  Downloaded regex-automata v0.4.8
+  Downloaded aho-corasick v1.1.3
+  Downloaded serde v1.0.214
+  Downloaded proc-macro2 v1.0.89
+  Downloaded bytes v1.8.0
+  Downloaded same-file v1.0.6
+  Downloaded parking_lot v0.12.3
+  Downloaded net2 v0.2.39
+  Downloaded lazycell v1.3.0
+  Downloaded libc v0.2.161
+  Downloaded iovec v0.1.4
+  Downloaded cfg-if v1.0.0
+  Downloaded bitflags v1.3.2
+  Downloaded autocfg v1.4.0
+  Downloaded argh_derive v0.1.12
+  Downloaded cfg-if v0.1.10
+   Compiling libc v0.2.161
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling autocfg v1.4.0
+   Compiling serde v1.0.214
+   Compiling slab v0.4.9
+   Compiling cfg-if v1.0.0
+   Compiling memchr v2.7.4
+   Compiling lock_api v0.4.12
+   Compiling parking_lot_core v0.9.10
+   Compiling cfg-if v0.1.10
+   Compiling quote v1.0.37
+   Compiling net2 v0.2.39
+   Compiling syn v2.0.87
+   Compiling iovec v0.1.4
+   Compiling aho-corasick v1.1.3
+   Compiling regex-syntax v0.8.5
+   Compiling scopeguard v1.2.0
+   Compiling log v0.4.22
+   Compiling smallvec v1.13.2
+   Compiling mio v0.6.23
+   Compiling regex-automata v0.4.8
+   Compiling serde_derive v1.0.214
+   Compiling inotify-sys v0.1.5
+   Compiling bitflags v1.3.2
+   Compiling serde_json v1.0.132
+   Compiling lazycell v1.3.0
+   Compiling same-file v1.0.6
+   Compiling lazy_static v1.5.0
+   Compiling unicode-width v0.1.14
+   Compiling console v0.15.8
+   Compiling argh_shared v0.1.12
+   Compiling argh_derive v0.1.12
+   Compiling walkdir v2.5.0
+   Compiling mio-extras v2.0.6
+   Compiling inotify v0.7.1
+   Compiling parking_lot v0.12.3
+   Compiling regex v1.11.1
+   Compiling tokio-macros v2.4.0
+   Compiling signal-hook-registry v1.4.2
+   Compiling socket2 v0.5.7
+   Compiling mio v1.0.2
+   Compiling filetime v0.2.25
+   Compiling itoa v1.0.11
+   Compiling bytes v1.8.0
+   Compiling number_prefix v0.4.0
+   Compiling ryu v1.0.18
+   Compiling pin-project-lite v0.2.15
+   Compiling tokio v1.41.0
+   Compiling indicatif v0.16.2
+   Compiling notify v4.0.18
+   Compiling argh v0.1.12
+   Compiling toml v0.5.11
+   Compiling glob v0.3.1
+   Compiling home v0.5.9
+   Compiling rustlings v5.5.1 (/home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu)
+    Finished `release` profile [optimized] target(s) in 54.77s
+  Installing /home/runner/.cargo/bin/rustlings
+   Installed package `rustlings v5.5.1 (/home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu)` (executable `rustlings`)

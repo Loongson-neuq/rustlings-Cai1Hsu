@@ -1,0 +1,29 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:1:
+ /*
+-	sort
+-	This problem requires you to implement a sorting algorithm
+-	you can use bubble sorting, insertion sorting, heap sorting, etc.
++    sort
++    This problem requires you to implement a sorting algorithm
++    you can use bubble sorting, insertion sorting, heap sorting, etc.
+ */
+ // I AM NOT DONE
+ 
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:8:
+-fn sort<T>(array: &mut [T]){
+-	//TODO
++fn sort<T>(array: &mut [T]) {
++    //TODO
+ }
+ #[cfg(test)]
+ mod tests {
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:18:
+         sort(&mut vec);

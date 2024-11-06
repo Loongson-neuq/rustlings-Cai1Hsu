@@ -1,0 +1,47 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:1:
+ /*
+-	heap
+-	This question requires you to implement a binary heap function
++    heap
++    This question requires you to implement a binary heap function
+ */
+ // I AM NOT DONE
+ 
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:58:
+ 
+     fn smallest_child_idx(&self, idx: usize) -> usize {
+         //TODO
+-		0
++        0
+     }
+ }
+ 
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:85:
+ 
+     fn next(&mut self) -> Option<T> {
+         //TODO
+-		None
++        None
+     }
+ }
+ 
+Diff in /home/runner/work/rustlings-Cai1Hsu/rustlings-Cai1Hsu/format_check/src/lib.rs:152:
+         assert_eq!(heap.next(), Some(2));
+     }
+ }
++
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED
